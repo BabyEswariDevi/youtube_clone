@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎬 YouTube Clone</div>
+    <input type="text" placeholder="Search..." class="search-bar" />
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+        <li>🏠 Home</li>
+        <li>🔥 Trending</li>
+        <li>📺 Subscriptions</li>
+        <li>📚 Library</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="video-grid">
+
+        <div class="video-card" onclick="playVideo('https://www.w3schools.com/html/mov_bbb.mp4')">
+          <img src="https://via.placeholder.com/300x180.png?text=Big+Buck+Bunny" alt="Video 1">
+          <h4>Big Buck Bunny</h4>
+        </div>
+
+        <div class="video-card" onclick="playVideo('https://www.w3schools.com/html/mov_bbb.mp4')">
+          <img src="https://via.placeholder.com/300x180.png?text=Sample+Video+2" alt="Video 2">
+          <h4>Sample MP4 Video</h4>
+        </div>
+
+        <div class="video-card" onclick="playVideo('https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4')">
+          <img src="https://via.placeholder.com/300x180.png?text=Sample+Video+3" alt="Video 3">
+          <h4>Learning Container Video</h4>
+        </div>
+
+      </div>
+
+      <div id="player" class="video-player hidden">
+        <video id="mainVideo" controls autoplay></video>
+        <button onclick="closePlayer()">❌ Close</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
